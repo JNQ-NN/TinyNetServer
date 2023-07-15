@@ -1,0 +1,9 @@
+/root/cpp_project/TinyNetServer/build/CMakeFiles/rebuild_cache.dir
+/root/cpp_project/TinyNetServer/build/CMakeFiles/TinyNetServer.dir
+/root/cpp_project/TinyNetServer/build/CMakeFiles/edit_cache.dir
+/root/cpp_project/TinyNetServer/build/NetServer/CMakeFiles/rebuild_cache.dir
+/root/cpp_project/TinyNetServer/build/NetServer/CMakeFiles/NetServer.dir
+/root/cpp_project/TinyNetServer/build/NetServer/CMakeFiles/edit_cache.dir
+/root/cpp_project/TinyNetServer/build/NetClient/CMakeFiles/rebuild_cache.dir
+/root/cpp_project/TinyNetServer/build/NetClient/CMakeFiles/NetClient.dir
+/root/cpp_project/TinyNetServer/build/NetClient/CMakeFiles/edit_cache.dir

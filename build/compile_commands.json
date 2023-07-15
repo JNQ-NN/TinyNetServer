@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/root/cpp_project/TinyNetServer/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/TinyNetServer.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/main.cpp",
+  "file": "/root/cpp_project/TinyNetServer/main.cpp"
+},
+{
+  "directory": "/root/cpp_project/TinyNetServer/build/NetServer",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/NetServer.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/NetServer/main.cpp",
+  "file": "/root/cpp_project/TinyNetServer/NetServer/main.cpp"
+},
+{
+  "directory": "/root/cpp_project/TinyNetServer/build/NetClient",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/NetClient.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/NetClient/main.cpp",
+  "file": "/root/cpp_project/TinyNetServer/NetClient/main.cpp"
+}
+]
