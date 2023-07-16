@@ -1,17 +1,27 @@
 [
 {
   "directory": "/root/cpp_project/TinyNetServer/build",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/TinyNetServer.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/main.cpp",
+  "command": "/usr/bin/g++    -Wall -fexec-charset=utf-8 -g -o CMakeFiles/TinyNetServer.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/main.cpp",
   "file": "/root/cpp_project/TinyNetServer/main.cpp"
 },
 {
   "directory": "/root/cpp_project/TinyNetServer/build/NetServer",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/NetServer.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/NetServer/main.cpp",
+  "command": "/usr/bin/g++    -Wall -fexec-charset=utf-8 -g -o CMakeFiles/NetServer.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/NetServer/main.cpp",
   "file": "/root/cpp_project/TinyNetServer/NetServer/main.cpp"
 },
 {
+  "directory": "/root/cpp_project/TinyNetServer/build/NetServer",
+  "command": "/usr/bin/g++    -Wall -fexec-charset=utf-8 -g -o CMakeFiles/NetServer.dir/server.cpp.o -c /root/cpp_project/TinyNetServer/NetServer/server.cpp",
+  "file": "/root/cpp_project/TinyNetServer/NetServer/server.cpp"
+},
+{
+  "directory": "/root/cpp_project/TinyNetServer/build/NetServer",
+  "command": "/usr/bin/g++    -Wall -fexec-charset=utf-8 -g -o CMakeFiles/NetServer.dir/session.cpp.o -c /root/cpp_project/TinyNetServer/NetServer/session.cpp",
+  "file": "/root/cpp_project/TinyNetServer/NetServer/session.cpp"
+},
+{
   "directory": "/root/cpp_project/TinyNetServer/build/NetClient",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/NetClient.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/NetClient/main.cpp",
+  "command": "/usr/bin/g++    -Wall -fexec-charset=utf-8 -g -o CMakeFiles/NetClient.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/NetClient/main.cpp",
   "file": "/root/cpp_project/TinyNetServer/NetClient/main.cpp"
 }
 ]

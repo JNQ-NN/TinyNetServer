@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "NetServer/NetServer"
+			"path" : "NetClient/NetClient"
 		}
 	],
 	"backtrace" : 1,
@@ -14,7 +14,7 @@
 		],
 		"files" : 
 		[
-			"NetServer/CMakeLists.txt"
+			"NetClient/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : " -Wall -fexec-charset=utf-8 -g"
 				}
 			],
 			"language" : "CXX",
@@ -45,13 +45,13 @@
 			]
 		}
 	],
-	"id" : "NetServer::@8e0c5cdd254e2ec0fa82",
+	"id" : "NetClient::@75ab2e6eb1ac590e2800",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-Wall -fexec-charset=utf-8 -g",
 				"role" : "flags"
 			},
 			{
@@ -65,12 +65,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "NetServer",
-	"nameOnDisk" : "NetServer",
+	"name" : "NetClient",
+	"nameOnDisk" : "NetClient",
 	"paths" : 
 	{
-		"build" : "NetServer",
-		"source" : "NetServer"
+		"build" : "NetClient",
+		"source" : "NetClient"
 	},
 	"sourceGroups" : 
 	[
@@ -80,6 +80,13 @@
 			[
 				0
 			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1
+			]
 		}
 	],
 	"sources" : 
@@ -87,8 +94,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "NetServer/main.cpp",
+			"path" : "NetClient/main.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "NetClient/session.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

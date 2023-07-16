@@ -1,1 +1,0 @@
-/usr/bin/g++ -g -rdynamic CMakeFiles/NetServer.dir/main.cpp.o -o NetServer  -lpthread 

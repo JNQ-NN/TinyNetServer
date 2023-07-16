@@ -154,6 +154,54 @@ main.cpp.s:
 	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+server.o: server.cpp.o
+.PHONY : server.o
+
+# target to build an object file
+server.cpp.o:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/server.cpp.o
+.PHONY : server.cpp.o
+
+server.i: server.cpp.i
+.PHONY : server.i
+
+# target to preprocess a source file
+server.cpp.i:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/server.cpp.i
+.PHONY : server.cpp.i
+
+server.s: server.cpp.s
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.cpp.s:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/server.cpp.s
+.PHONY : server.cpp.s
+
+session.o: session.cpp.o
+.PHONY : session.o
+
+# target to build an object file
+session.cpp.o:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/session.cpp.o
+.PHONY : session.cpp.o
+
+session.i: session.cpp.i
+.PHONY : session.i
+
+# target to preprocess a source file
+session.cpp.i:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/session.cpp.i
+.PHONY : session.cpp.i
+
+session.s: session.cpp.s
+.PHONY : session.s
+
+# target to generate assembly for a file
+session.cpp.s:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/session.cpp.s
+.PHONY : session.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -166,6 +214,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
+	@echo "... session.o"
+	@echo "... session.i"
+	@echo "... session.s"
 .PHONY : help
 
 

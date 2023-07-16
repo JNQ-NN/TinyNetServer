@@ -1,17 +1,18 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(AsioServer VERSION 0.1.0 LANGUAGES C CXX)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fexec-charset=utf-8")
 
-#Íâ²¿¿â
+#å¤–éƒ¨åº“
 if(CMAKE_HOST_SYSTEM MATCHES "Linux")        #linux
     message("current platform Linux")
     find_package(Boost 1.82.0 REQUIRED)  
-    #pthread¿â
+    #pthreadåº“
     find_package(Threads REQUIRED)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
 elseif(CMAKE_HOST_SYSTEM MATCHES "Windows")  #windows
     message("current platform Windows")
     cmake_policy(SET CMP0074 NEW)
-    message($ENV{BOOST_ROOT})  #¾²Ì¬¿âÂ·¾¶ Í¨¹ıÏµÍ³»·¾³±äÁ¿ÅäÖÃ
+    message($ENV{BOOST_ROOT})  #é™æ€åº“è·¯å¾„ é€šè¿‡ç³»ç»Ÿç¯å¢ƒå˜é‡é…ç½®
     set(BOOST_LIBRARY_DIRS $ENV{BOOST_ROOT}\\lib)
     message(${BOOST_LIBRARY_DIRS})
     find_package(Boost 1.82 REQUIRED)
@@ -19,7 +20,7 @@ elseif(CMAKE_HOST_SYSTEM MATCHES "Windows")  #windows
     include_directories(include  ${Boost_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 endif()
 
-#¿ÉÖ´ĞĞÎÄ¼ş
+#å¯æ‰§è¡Œæ–‡ä»¶
 add_executable(TinyNetServer main.cpp)
 add_subdirectory(NetServer)
 add_subdirectory(NetClient)
@@ -27,11 +28,11 @@ add_subdirectory(NetClient)
 
 if(CMAKE_HOST_SYSTEM MATCHES "Linux")
     target_link_libraries(TinyNetServer Threads::Threads)
-        #Threads½â¾öLinuxÏµÍ³pthreadµÄ¼æÈİĞÔÎÊÌâ
+        #Threadsè§£å†³Linuxç³»ç»Ÿpthreadçš„å…¼å®¹æ€§é—®é¢˜
 elseif(CMAKE_HOST_SYSTEM MATCHES "Windows")
     if(MINGW)
         target_link_libraries(TinyNetServer ws2_32 mswsock)
-        # ws2_32 ½â¾öBoostÔÚposixµÄ¼æÈİĞÔÎÊÌâ
-        # mswsock ½â¾öasioÌ×½Ó×ÖµÄ¼æÈİĞÔÎÊÌâ
+        # ws2_32 è§£å†³Booståœ¨posixçš„å…¼å®¹æ€§é—®é¢˜
+        # mswsock è§£å†³asioå¥—æ¥å­—çš„å…¼å®¹æ€§é—®é¢˜
     endif()
 endif()

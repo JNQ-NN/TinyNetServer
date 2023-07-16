@@ -168,4 +168,12 @@ CMakeFiles/TinyNetServer.dir/main.cpp.o
  /usr/include/c++/8/bits/ostream.tcc
  /usr/include/c++/8/istream
  /usr/include/c++/8/bits/istream.tcc
+ /usr/include/unistd.h
+ /usr/include/bits/posix_opt.h
+ /usr/include/bits/environments.h
+ /usr/include/bits/confname.h
+ /usr/include/bits/getopt_posix.h
+ /usr/include/bits/getopt_core.h
+ /usr/include/sys/utsname.h
+ /usr/include/bits/utsname.h
 

@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -rdynamic CMakeFiles/TinyNetServer.dir/main.cpp.o -o TinyNetServer  -lpthread 
+/usr/bin/g++  -Wall -fexec-charset=utf-8 -g -rdynamic CMakeFiles/TinyNetServer.dir/main.cpp.o -o TinyNetServer  -lpthread 
