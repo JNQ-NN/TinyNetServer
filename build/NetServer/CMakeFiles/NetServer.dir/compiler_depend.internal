@@ -1266,7 +1266,7 @@ NetServer/CMakeFiles/NetServer.dir/main.cpp.o
  /usr/include/boost/asio/write_at.hpp
  /usr/include/boost/asio/impl/write_at.hpp
  /root/cpp_project/TinyNetServer/NetServer/server.h
- /root/cpp_project/TinyNetServer/NetServer/session.h
+ /root/cpp_project/TinyNetServer/NetServer/server_session.h
 
 NetServer/CMakeFiles/NetServer.dir/server.cpp.o
  /root/cpp_project/TinyNetServer/NetServer/server.cpp
@@ -2533,12 +2533,12 @@ NetServer/CMakeFiles/NetServer.dir/server.cpp.o
  /usr/include/boost/asio/writable_pipe.hpp
  /usr/include/boost/asio/write_at.hpp
  /usr/include/boost/asio/impl/write_at.hpp
- /root/cpp_project/TinyNetServer/NetServer/session.h
+ /root/cpp_project/TinyNetServer/NetServer/server_session.h
 
-NetServer/CMakeFiles/NetServer.dir/session.cpp.o
- /root/cpp_project/TinyNetServer/NetServer/session.cpp
+NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o
+ /root/cpp_project/TinyNetServer/NetServer/server_session.cpp
  /usr/include/stdc-predef.h
- /root/cpp_project/TinyNetServer/NetServer/session.h
+ /root/cpp_project/TinyNetServer/NetServer/server_session.h
  /usr/include/c++/8/iostream
  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h
  /usr/include/bits/wordsize.h

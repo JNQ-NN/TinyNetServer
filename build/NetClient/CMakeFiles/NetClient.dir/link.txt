@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -fexec-charset=utf-8 -g -rdynamic CMakeFiles/NetClient.dir/main.cpp.o -o NetClient  -lpthread 
+/usr/bin/g++  -Wall -fexec-charset=utf-8 -g -rdynamic CMakeFiles/NetClient.dir/client.cpp.o CMakeFiles/NetClient.dir/client_session.cpp.o CMakeFiles/NetClient.dir/main.cpp.o -o NetClient  -lpthread 

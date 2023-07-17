@@ -130,6 +130,54 @@ NetClient/fast:
 	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetClient/CMakeFiles/NetClient.dir/build.make NetClient/CMakeFiles/NetClient.dir/build
 .PHONY : NetClient/fast
 
+client.o: client.cpp.o
+.PHONY : client.o
+
+# target to build an object file
+client.cpp.o:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetClient/CMakeFiles/NetClient.dir/build.make NetClient/CMakeFiles/NetClient.dir/client.cpp.o
+.PHONY : client.cpp.o
+
+client.i: client.cpp.i
+.PHONY : client.i
+
+# target to preprocess a source file
+client.cpp.i:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetClient/CMakeFiles/NetClient.dir/build.make NetClient/CMakeFiles/NetClient.dir/client.cpp.i
+.PHONY : client.cpp.i
+
+client.s: client.cpp.s
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.cpp.s:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetClient/CMakeFiles/NetClient.dir/build.make NetClient/CMakeFiles/NetClient.dir/client.cpp.s
+.PHONY : client.cpp.s
+
+client_session.o: client_session.cpp.o
+.PHONY : client_session.o
+
+# target to build an object file
+client_session.cpp.o:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetClient/CMakeFiles/NetClient.dir/build.make NetClient/CMakeFiles/NetClient.dir/client_session.cpp.o
+.PHONY : client_session.cpp.o
+
+client_session.i: client_session.cpp.i
+.PHONY : client_session.i
+
+# target to preprocess a source file
+client_session.cpp.i:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetClient/CMakeFiles/NetClient.dir/build.make NetClient/CMakeFiles/NetClient.dir/client_session.cpp.i
+.PHONY : client_session.cpp.i
+
+client_session.s: client_session.cpp.s
+.PHONY : client_session.s
+
+# target to generate assembly for a file
+client_session.cpp.s:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetClient/CMakeFiles/NetClient.dir/build.make NetClient/CMakeFiles/NetClient.dir/client_session.cpp.s
+.PHONY : client_session.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -163,6 +211,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... NetClient"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... client_session.o"
+	@echo "... client_session.i"
+	@echo "... client_session.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

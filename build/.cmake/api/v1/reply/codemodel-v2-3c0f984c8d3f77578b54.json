@@ -75,14 +75,14 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "NetClient::@75ab2e6eb1ac590e2800",
-					"jsonFile" : "target-NetClient-Debug-dfed7d12940e2d637a00.json",
+					"jsonFile" : "target-NetClient-Debug-c15d2851063c45e4e812.json",
 					"name" : "NetClient",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "NetServer::@8e0c5cdd254e2ec0fa82",
-					"jsonFile" : "target-NetServer-Debug-e0933ce3cb7a94b5a3a8.json",
+					"jsonFile" : "target-NetServer-Debug-8f18343cb1c06437d6e6.json",
 					"name" : "NetServer",
 					"projectIndex" : 0
 				},

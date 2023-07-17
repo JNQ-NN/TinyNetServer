@@ -2,7 +2,7 @@
 #include <boost/asio.hpp>
 using namespace std;
 using namespace boost;
-#include "session.h"
+#include "server_session.h"
 
 class Server{
 public:

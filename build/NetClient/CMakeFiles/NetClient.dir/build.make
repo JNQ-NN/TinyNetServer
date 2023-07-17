@@ -69,10 +69,38 @@ include NetClient/CMakeFiles/NetClient.dir/progress.make
 # Include the compile flags for this target's objects.
 include NetClient/CMakeFiles/NetClient.dir/flags.make
 
+NetClient/CMakeFiles/NetClient.dir/client.cpp.o: NetClient/CMakeFiles/NetClient.dir/flags.make
+NetClient/CMakeFiles/NetClient.dir/client.cpp.o: ../NetClient/client.cpp
+NetClient/CMakeFiles/NetClient.dir/client.cpp.o: NetClient/CMakeFiles/NetClient.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object NetClient/CMakeFiles/NetClient.dir/client.cpp.o"
+	cd /root/cpp_project/TinyNetServer/build/NetClient && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NetClient/CMakeFiles/NetClient.dir/client.cpp.o -MF CMakeFiles/NetClient.dir/client.cpp.o.d -o CMakeFiles/NetClient.dir/client.cpp.o -c /root/cpp_project/TinyNetServer/NetClient/client.cpp
+
+NetClient/CMakeFiles/NetClient.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetClient.dir/client.cpp.i"
+	cd /root/cpp_project/TinyNetServer/build/NetClient && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/cpp_project/TinyNetServer/NetClient/client.cpp > CMakeFiles/NetClient.dir/client.cpp.i
+
+NetClient/CMakeFiles/NetClient.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetClient.dir/client.cpp.s"
+	cd /root/cpp_project/TinyNetServer/build/NetClient && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/cpp_project/TinyNetServer/NetClient/client.cpp -o CMakeFiles/NetClient.dir/client.cpp.s
+
+NetClient/CMakeFiles/NetClient.dir/client_session.cpp.o: NetClient/CMakeFiles/NetClient.dir/flags.make
+NetClient/CMakeFiles/NetClient.dir/client_session.cpp.o: ../NetClient/client_session.cpp
+NetClient/CMakeFiles/NetClient.dir/client_session.cpp.o: NetClient/CMakeFiles/NetClient.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object NetClient/CMakeFiles/NetClient.dir/client_session.cpp.o"
+	cd /root/cpp_project/TinyNetServer/build/NetClient && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NetClient/CMakeFiles/NetClient.dir/client_session.cpp.o -MF CMakeFiles/NetClient.dir/client_session.cpp.o.d -o CMakeFiles/NetClient.dir/client_session.cpp.o -c /root/cpp_project/TinyNetServer/NetClient/client_session.cpp
+
+NetClient/CMakeFiles/NetClient.dir/client_session.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetClient.dir/client_session.cpp.i"
+	cd /root/cpp_project/TinyNetServer/build/NetClient && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/cpp_project/TinyNetServer/NetClient/client_session.cpp > CMakeFiles/NetClient.dir/client_session.cpp.i
+
+NetClient/CMakeFiles/NetClient.dir/client_session.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetClient.dir/client_session.cpp.s"
+	cd /root/cpp_project/TinyNetServer/build/NetClient && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/cpp_project/TinyNetServer/NetClient/client_session.cpp -o CMakeFiles/NetClient.dir/client_session.cpp.s
+
 NetClient/CMakeFiles/NetClient.dir/main.cpp.o: NetClient/CMakeFiles/NetClient.dir/flags.make
 NetClient/CMakeFiles/NetClient.dir/main.cpp.o: ../NetClient/main.cpp
 NetClient/CMakeFiles/NetClient.dir/main.cpp.o: NetClient/CMakeFiles/NetClient.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object NetClient/CMakeFiles/NetClient.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object NetClient/CMakeFiles/NetClient.dir/main.cpp.o"
 	cd /root/cpp_project/TinyNetServer/build/NetClient && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NetClient/CMakeFiles/NetClient.dir/main.cpp.o -MF CMakeFiles/NetClient.dir/main.cpp.o.d -o CMakeFiles/NetClient.dir/main.cpp.o -c /root/cpp_project/TinyNetServer/NetClient/main.cpp
 
 NetClient/CMakeFiles/NetClient.dir/main.cpp.i: cmake_force
@@ -85,15 +113,19 @@ NetClient/CMakeFiles/NetClient.dir/main.cpp.s: cmake_force
 
 # Object files for target NetClient
 NetClient_OBJECTS = \
+"CMakeFiles/NetClient.dir/client.cpp.o" \
+"CMakeFiles/NetClient.dir/client_session.cpp.o" \
 "CMakeFiles/NetClient.dir/main.cpp.o"
 
 # External object files for target NetClient
 NetClient_EXTERNAL_OBJECTS =
 
+NetClient/NetClient: NetClient/CMakeFiles/NetClient.dir/client.cpp.o
+NetClient/NetClient: NetClient/CMakeFiles/NetClient.dir/client_session.cpp.o
 NetClient/NetClient: NetClient/CMakeFiles/NetClient.dir/main.cpp.o
 NetClient/NetClient: NetClient/CMakeFiles/NetClient.dir/build.make
 NetClient/NetClient: NetClient/CMakeFiles/NetClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable NetClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable NetClient"
 	cd /root/cpp_project/TinyNetServer/build/NetClient && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NetClient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

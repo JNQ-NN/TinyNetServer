@@ -1,6 +1,8 @@
-NetClient/CMakeFiles/NetClient.dir/main.cpp.o: \
- /root/cpp_project/TinyNetServer/NetClient/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/8/iostream \
+NetClient/CMakeFiles/NetClient.dir/client.cpp.o: \
+ /root/cpp_project/TinyNetServer/NetClient/client.cpp \
+ /usr/include/stdc-predef.h \
+ /root/cpp_project/TinyNetServer/NetClient/client.h \
+ /usr/include/c++/8/iostream \
  /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/8/x86_64-redhat-linux/bits/os_defines.h \
@@ -1107,5 +1109,4 @@ NetClient/CMakeFiles/NetClient.dir/main.cpp.o: \
  /usr/include/boost/asio/writable_pipe.hpp \
  /usr/include/boost/asio/write_at.hpp \
  /usr/include/boost/asio/impl/write_at.hpp \
- /root/cpp_project/TinyNetServer/NetClient/client.h \
  /root/cpp_project/TinyNetServer/NetClient/client_session.h

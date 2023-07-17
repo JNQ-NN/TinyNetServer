@@ -97,32 +97,32 @@ NetServer/CMakeFiles/NetServer.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetServer.dir/server.cpp.s"
 	cd /root/cpp_project/TinyNetServer/build/NetServer && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/cpp_project/TinyNetServer/NetServer/server.cpp -o CMakeFiles/NetServer.dir/server.cpp.s
 
-NetServer/CMakeFiles/NetServer.dir/session.cpp.o: NetServer/CMakeFiles/NetServer.dir/flags.make
-NetServer/CMakeFiles/NetServer.dir/session.cpp.o: ../NetServer/session.cpp
-NetServer/CMakeFiles/NetServer.dir/session.cpp.o: NetServer/CMakeFiles/NetServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object NetServer/CMakeFiles/NetServer.dir/session.cpp.o"
-	cd /root/cpp_project/TinyNetServer/build/NetServer && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NetServer/CMakeFiles/NetServer.dir/session.cpp.o -MF CMakeFiles/NetServer.dir/session.cpp.o.d -o CMakeFiles/NetServer.dir/session.cpp.o -c /root/cpp_project/TinyNetServer/NetServer/session.cpp
+NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: NetServer/CMakeFiles/NetServer.dir/flags.make
+NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: ../NetServer/server_session.cpp
+NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: NetServer/CMakeFiles/NetServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o"
+	cd /root/cpp_project/TinyNetServer/build/NetServer && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o -MF CMakeFiles/NetServer.dir/server_session.cpp.o.d -o CMakeFiles/NetServer.dir/server_session.cpp.o -c /root/cpp_project/TinyNetServer/NetServer/server_session.cpp
 
-NetServer/CMakeFiles/NetServer.dir/session.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetServer.dir/session.cpp.i"
-	cd /root/cpp_project/TinyNetServer/build/NetServer && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/cpp_project/TinyNetServer/NetServer/session.cpp > CMakeFiles/NetServer.dir/session.cpp.i
+NetServer/CMakeFiles/NetServer.dir/server_session.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetServer.dir/server_session.cpp.i"
+	cd /root/cpp_project/TinyNetServer/build/NetServer && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/cpp_project/TinyNetServer/NetServer/server_session.cpp > CMakeFiles/NetServer.dir/server_session.cpp.i
 
-NetServer/CMakeFiles/NetServer.dir/session.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetServer.dir/session.cpp.s"
-	cd /root/cpp_project/TinyNetServer/build/NetServer && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/cpp_project/TinyNetServer/NetServer/session.cpp -o CMakeFiles/NetServer.dir/session.cpp.s
+NetServer/CMakeFiles/NetServer.dir/server_session.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetServer.dir/server_session.cpp.s"
+	cd /root/cpp_project/TinyNetServer/build/NetServer && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/cpp_project/TinyNetServer/NetServer/server_session.cpp -o CMakeFiles/NetServer.dir/server_session.cpp.s
 
 # Object files for target NetServer
 NetServer_OBJECTS = \
 "CMakeFiles/NetServer.dir/main.cpp.o" \
 "CMakeFiles/NetServer.dir/server.cpp.o" \
-"CMakeFiles/NetServer.dir/session.cpp.o"
+"CMakeFiles/NetServer.dir/server_session.cpp.o"
 
 # External object files for target NetServer
 NetServer_EXTERNAL_OBJECTS =
 
 NetServer/NetServer: NetServer/CMakeFiles/NetServer.dir/main.cpp.o
 NetServer/NetServer: NetServer/CMakeFiles/NetServer.dir/server.cpp.o
-NetServer/NetServer: NetServer/CMakeFiles/NetServer.dir/session.cpp.o
+NetServer/NetServer: NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o
 NetServer/NetServer: NetServer/CMakeFiles/NetServer.dir/build.make
 NetServer/NetServer: NetServer/CMakeFiles/NetServer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/cpp_project/TinyNetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable NetServer"

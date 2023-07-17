@@ -1,1 +1,1 @@
-/usr/bin/g++  -Wall -fexec-charset=utf-8 -g -rdynamic CMakeFiles/NetServer.dir/main.cpp.o CMakeFiles/NetServer.dir/server.cpp.o CMakeFiles/NetServer.dir/session.cpp.o -o NetServer  -lpthread 
+/usr/bin/g++  -Wall -fexec-charset=utf-8 -g -rdynamic CMakeFiles/NetServer.dir/main.cpp.o CMakeFiles/NetServer.dir/server.cpp.o CMakeFiles/NetServer.dir/server_session.cpp.o -o NetServer  -lpthread 

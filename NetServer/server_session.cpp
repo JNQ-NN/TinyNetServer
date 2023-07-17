@@ -1,4 +1,4 @@
-#include "session.h"
+#include "server_session.h"
 
 Session::Session(asio::io_context& ioc):_socket(ioc){
     _bufferReceive = new char[Msg_Length];
@@ -14,6 +14,7 @@ Session::~Session(){
         delete _bufferSend;
         _bufferSend = nullptr;
     }
+    _socket.close();
 }
 
 asio::ip::tcp::socket& Session::getSocket(){

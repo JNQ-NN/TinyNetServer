@@ -178,29 +178,29 @@ server.cpp.s:
 	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/server.cpp.s
 .PHONY : server.cpp.s
 
-session.o: session.cpp.o
-.PHONY : session.o
+server_session.o: server_session.cpp.o
+.PHONY : server_session.o
 
 # target to build an object file
-session.cpp.o:
-	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/session.cpp.o
-.PHONY : session.cpp.o
+server_session.cpp.o:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o
+.PHONY : server_session.cpp.o
 
-session.i: session.cpp.i
-.PHONY : session.i
+server_session.i: server_session.cpp.i
+.PHONY : server_session.i
 
 # target to preprocess a source file
-session.cpp.i:
-	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/session.cpp.i
-.PHONY : session.cpp.i
+server_session.cpp.i:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/server_session.cpp.i
+.PHONY : server_session.cpp.i
 
-session.s: session.cpp.s
-.PHONY : session.s
+server_session.s: server_session.cpp.s
+.PHONY : server_session.s
 
 # target to generate assembly for a file
-session.cpp.s:
-	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/session.cpp.s
-.PHONY : session.cpp.s
+server_session.cpp.s:
+	cd /root/cpp_project/TinyNetServer/build && $(MAKE) $(MAKESILENT) -f NetServer/CMakeFiles/NetServer.dir/build.make NetServer/CMakeFiles/NetServer.dir/server_session.cpp.s
+.PHONY : server_session.cpp.s
 
 # Help Target
 help:
@@ -217,9 +217,9 @@ help:
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
-	@echo "... session.o"
-	@echo "... session.i"
-	@echo "... session.s"
+	@echo "... server_session.o"
+	@echo "... server_session.i"
+	@echo "... server_session.s"
 .PHONY : help
 
 

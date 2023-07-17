@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/cpp_project/TinyNetServer/NetServer/main.cpp" "NetServer/CMakeFiles/NetServer.dir/main.cpp.o" "gcc" "NetServer/CMakeFiles/NetServer.dir/main.cpp.o.d"
   "/root/cpp_project/TinyNetServer/NetServer/server.cpp" "NetServer/CMakeFiles/NetServer.dir/server.cpp.o" "gcc" "NetServer/CMakeFiles/NetServer.dir/server.cpp.o.d"
-  "/root/cpp_project/TinyNetServer/NetServer/session.cpp" "NetServer/CMakeFiles/NetServer.dir/session.cpp.o" "gcc" "NetServer/CMakeFiles/NetServer.dir/session.cpp.o.d"
+  "/root/cpp_project/TinyNetServer/NetServer/server_session.cpp" "NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o" "gcc" "NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o.d"
   )
 
 # Targets to which this target links.

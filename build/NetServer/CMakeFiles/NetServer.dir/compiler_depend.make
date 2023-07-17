@@ -1265,7 +1265,7 @@ NetServer/CMakeFiles/NetServer.dir/main.cpp.o: ../NetServer/main.cpp \
   /usr/include/boost/asio/write_at.hpp \
   /usr/include/boost/asio/impl/write_at.hpp \
   ../NetServer/server.h \
-  ../NetServer/session.h
+  ../NetServer/server_session.h
 
 NetServer/CMakeFiles/NetServer.dir/server.cpp.o: ../NetServer/server.cpp \
   /usr/include/stdc-predef.h \
@@ -2531,11 +2531,11 @@ NetServer/CMakeFiles/NetServer.dir/server.cpp.o: ../NetServer/server.cpp \
   /usr/include/boost/asio/writable_pipe.hpp \
   /usr/include/boost/asio/write_at.hpp \
   /usr/include/boost/asio/impl/write_at.hpp \
-  ../NetServer/session.h
+  ../NetServer/server_session.h
 
-NetServer/CMakeFiles/NetServer.dir/session.cpp.o: ../NetServer/session.cpp \
+NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: ../NetServer/server_session.cpp \
   /usr/include/stdc-predef.h \
-  ../NetServer/session.h \
+  ../NetServer/server_session.h \
   /usr/include/c++/8/iostream \
   /usr/include/c++/8/x86_64-redhat-linux/bits/c++config.h \
   /usr/include/bits/wordsize.h \
@@ -3799,7 +3799,7 @@ NetServer/CMakeFiles/NetServer.dir/session.cpp.o: ../NetServer/session.cpp \
   /usr/include/boost/asio/impl/write_at.hpp
 
 
-../NetServer/session.cpp:
+../NetServer/server_session.h:
 
 /usr/include/boost/asio/impl/write_at.hpp:
 
@@ -4623,8 +4623,6 @@ NetServer/CMakeFiles/NetServer.dir/session.cpp.o: ../NetServer/session.cpp \
 
 /usr/include/boost/asio/execution/any_executor.hpp:
 
-../NetServer/session.h:
-
 /usr/include/boost/asio/traits/static_query.hpp:
 
 /usr/include/c++/8/ext/type_traits.h:
@@ -5146,6 +5144,8 @@ NetServer/CMakeFiles/NetServer.dir/session.cpp.o: ../NetServer/session.cpp \
 /usr/include/boost/date_time/time_defs.hpp:
 
 /usr/include/c++/8/bits/stl_algobase.h:
+
+../NetServer/server_session.cpp:
 
 /usr/include/boost/asio/local/detail/impl/endpoint.ipp:
 
