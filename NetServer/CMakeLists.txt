@@ -9,4 +9,3 @@ elseif(CMAKE_HOST_SYSTEM MATCHES "Windows")
         target_link_libraries(NetServer ws2_32 mswsock)
     endif() 
 endif() 
-

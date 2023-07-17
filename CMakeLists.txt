@@ -25,7 +25,6 @@ add_executable(TinyNetServer main.cpp)
 add_subdirectory(NetServer)
 add_subdirectory(NetClient)
 
-
 if(CMAKE_HOST_SYSTEM MATCHES "Linux")
     target_link_libraries(TinyNetServer Threads::Threads)
         #Threads解决Linux系统pthread的兼容性问题

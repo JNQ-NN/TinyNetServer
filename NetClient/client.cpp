@@ -9,5 +9,3 @@ Client::Client(asio::io_context& ioc,string ip_address,int port):_ioc(ioc){
     std::shared_ptr<Session> session = make_shared<Session>(_ioc,endport);
     session->start();
 }
-
-
