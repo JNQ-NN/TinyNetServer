@@ -4,6 +4,21 @@
 using namespace std;
 using namespace boost;
 
+class MsgNode{
+public:
+    MsgNode(int msgMaxLen);
+    MsgNode(const char* msg,int msgMaxLen);
+    ~MsgNode();
+    char* getMsg();
+    void msgCopy(std::shared_ptr<MsgNode> sp);
+    void msgClear();
+    int getMaxLen();
+private:
+    char* _msg;     //维护msg内容 & msg地址
+    int _msgMaxLen; 
+    int _msgCurLen;
+};
+
 /*
  *@brief 管理scoket & IO事件
 */
@@ -17,7 +32,10 @@ public:
     void handle_send(const boost::system::error_code& error);
 private:
     asio::ip::tcp::socket _socket;
-    char* _bufferReceive;
-    char* _bufferSend;
+    //char* _bufferReceive;
+    //char* _bufferSend;
+    std::shared_ptr<MsgNode> _msgNodeReceive;
+    std::shared_ptr<MsgNode> _msgNodeSend;
+    
     enum{ Msg_Length = 0xFF };
 };

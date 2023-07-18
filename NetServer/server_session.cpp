@@ -1,19 +1,41 @@
 #include "server_session.h"
 
+MsgNode::MsgNode(int msgMaxLen):_msgMaxLen(msgMaxLen){
+    _msg = new char[_msgMaxLen];
+    memset(_msg,' ',_msgMaxLen);
+}
+
+MsgNode::MsgNode(const char* msg,int msgMaxLen):_msgMaxLen(msgMaxLen){
+    _msg = new char[_msgMaxLen];
+    memcpy(_msg,msg,_msgMaxLen);
+}
+
+MsgNode::~MsgNode(){
+    delete[] _msg;
+}
+
+char* MsgNode::getMsg(){
+    return _msg;
+}
+
+void MsgNode::msgCopy(std::shared_ptr<MsgNode> sp){
+    memcpy(_msg,sp->_msg,_msgMaxLen);
+}
+
+void MsgNode::msgClear(){
+    memset(_msg,' ',_msgMaxLen);
+}
+
+int MsgNode::getMaxLen(){
+    return _msgMaxLen;
+}
+
 Session::Session(asio::io_context& ioc):_socket(ioc){
-    _bufferReceive = new char[Msg_Length];
-    _bufferSend = new char[Msg_Length];
+    _msgNodeReceive = make_shared<MsgNode>(Msg_Length);
+    _msgNodeSend = make_shared<MsgNode>(Msg_Length);
 }
 
 Session::~Session(){
-    if(_bufferReceive!=nullptr){
-        delete _bufferReceive;
-        _bufferReceive = nullptr;
-    }
-     if(_bufferSend!=nullptr){
-        delete _bufferSend;
-        _bufferSend = nullptr;
-    }
     _socket.close();
 }
 
@@ -26,8 +48,8 @@ asio::ip::tcp::socket& Session::getSocket(){
 */
 void Session::start(){
     try{
-        memset(_bufferReceive,' ',Msg_Length);
-        _socket.async_receive(asio::buffer(_bufferReceive,Msg_Length),
+        _msgNodeReceive->msgClear();
+        _socket.async_receive(asio::buffer(_msgNodeReceive->getMsg(),_msgNodeReceive->getMaxLen()),
         std::bind(&Session::handle_receive,shared_from_this(),placeholders::_1));  
         /*问题：error_code:system 125 - Operation Cancelled
             对于指针指针维护的类，在调用this时，应该继承std::enable_shared_from_this<>类
@@ -45,10 +67,9 @@ void Session::start(){
 void Session::handle_receive(const boost::system::error_code& error){
     if(error) return;
     try{
-        cout<<"Msg:"<<_bufferReceive<<endl;
-        memset(_bufferSend,' ',Msg_Length);
-        memcpy(_bufferSend,_bufferReceive,Msg_Length);
-        _socket.async_send(asio::buffer(_bufferSend,Msg_Length),
+        cout<<"Msg:"<<_msgNodeReceive->getMsg()<<endl;
+        _msgNodeSend->msgCopy(_msgNodeReceive);
+        _socket.async_send(asio::buffer(_msgNodeSend->getMsg(),_msgNodeSend->getMaxLen()),
         bind(&Session::handle_send,shared_from_this(),placeholders::_1));
     }catch(const std::exception& e){
         std::cerr<<e.what()<<'\n';
