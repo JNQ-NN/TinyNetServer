@@ -1265,7 +1265,12 @@ NetServer/CMakeFiles/NetServer.dir/main.cpp.o: ../NetServer/main.cpp \
   /usr/include/boost/asio/write_at.hpp \
   /usr/include/boost/asio/impl/write_at.hpp \
   ../NetServer/server.h \
-  ../NetServer/server_session.h
+  ../NetServer/server_session.h \
+  /usr/include/c++/8/queue \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/bits/stl_queue.h
 
 NetServer/CMakeFiles/NetServer.dir/server.cpp.o: ../NetServer/server.cpp \
   /usr/include/stdc-predef.h \
@@ -2531,7 +2536,12 @@ NetServer/CMakeFiles/NetServer.dir/server.cpp.o: ../NetServer/server.cpp \
   /usr/include/boost/asio/writable_pipe.hpp \
   /usr/include/boost/asio/write_at.hpp \
   /usr/include/boost/asio/impl/write_at.hpp \
-  ../NetServer/server_session.h
+  ../NetServer/server_session.h \
+  /usr/include/c++/8/queue \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/bits/stl_queue.h
 
 NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: ../NetServer/server_session.cpp \
   /usr/include/stdc-predef.h \
@@ -3796,8 +3806,17 @@ NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: ../NetServer/server_ses
   /usr/include/boost/asio/windows/stream_handle.hpp \
   /usr/include/boost/asio/writable_pipe.hpp \
   /usr/include/boost/asio/write_at.hpp \
-  /usr/include/boost/asio/impl/write_at.hpp
+  /usr/include/boost/asio/impl/write_at.hpp \
+  /usr/include/c++/8/queue \
+  /usr/include/c++/8/deque \
+  /usr/include/c++/8/bits/stl_deque.h \
+  /usr/include/c++/8/bits/deque.tcc \
+  /usr/include/c++/8/bits/stl_queue.h
 
+
+/usr/include/c++/8/bits/stl_deque.h:
+
+/usr/include/c++/8/queue:
 
 ../NetServer/server_session.h:
 
@@ -3898,6 +3917,8 @@ NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: ../NetServer/server_ses
 /usr/include/boost/predef/library/std/modena.h:
 
 /usr/include/boost/predef/library/std/libcomo.h:
+
+/usr/include/c++/8/deque:
 
 /usr/include/boost/predef/library/std/dinkumware.h:
 
@@ -5223,6 +5244,8 @@ NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: ../NetServer/server_ses
 
 /usr/include/bits/eventfd.h:
 
+/usr/include/c++/8/bits/stl_queue.h:
+
 /usr/include/boost/asio/is_applicable_property.hpp:
 
 /usr/include/bits/stdio_lim.h:
@@ -5336,6 +5359,8 @@ NetServer/CMakeFiles/NetServer.dir/server_session.cpp.o: ../NetServer/server_ses
 /usr/include/boost/date_time/posix_time/posix_time_config.hpp:
 
 /usr/include/c++/8/x86_64-redhat-linux/bits/gthr-default.h:
+
+/usr/include/c++/8/bits/deque.tcc:
 
 /usr/include/boost/date_time/date_iterator.hpp:
 

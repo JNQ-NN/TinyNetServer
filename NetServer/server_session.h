@@ -1,6 +1,8 @@
 #include <iostream>
 #include <boost/asio.hpp>
 #include <memory>
+#include <thread>
+#include <queue>
 using namespace std;
 using namespace boost;
 
@@ -14,7 +16,7 @@ public:
     void msgClear();
     int getMaxLen();
 private:
-    char* _msg;     //维护msg内容 & msg地址
+    char* _msg;  //维护msg内容 & msg地址
     int _msgMaxLen; 
     int _msgCurLen;
 };
@@ -28,14 +30,13 @@ public:
     ~Session();
     asio::ip::tcp::socket& getSocket();
     void start();
-    void handle_receive(const boost::system::error_code& error);
+    void send(const char* msg,int msgMaxLen);    //双工异步发送接口
+    void handle_recv(const boost::system::error_code& error);
     void handle_send(const boost::system::error_code& error);
 private:
     asio::ip::tcp::socket _socket;
-    //char* _bufferReceive;
-    //char* _bufferSend;
-    std::shared_ptr<MsgNode> _msgNodeReceive;
-    std::shared_ptr<MsgNode> _msgNodeSend;
-    
+    std::shared_ptr<MsgNode> _msgNodeRecv;  
+    queue<std::shared_ptr<MsgNode>> _msgSendQueue;   //消息发送队列
+    mutex _mxSend;
     enum{ Msg_Length = 0xFF };
 };

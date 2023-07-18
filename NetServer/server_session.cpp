@@ -31,8 +31,8 @@ int MsgNode::getMaxLen(){
 }
 
 Session::Session(asio::io_context& ioc):_socket(ioc){
-    _msgNodeReceive = make_shared<MsgNode>(Msg_Length);
-    _msgNodeSend = make_shared<MsgNode>(Msg_Length);
+    _msgNodeRecv = make_shared<MsgNode>(Msg_Length);
+    //_msgNodeSend = make_shared<MsgNode>(Msg_Length);
 }
 
 Session::~Session(){
@@ -48,9 +48,9 @@ asio::ip::tcp::socket& Session::getSocket(){
 */
 void Session::start(){
     try{
-        _msgNodeReceive->msgClear();
-        _socket.async_receive(asio::buffer(_msgNodeReceive->getMsg(),_msgNodeReceive->getMaxLen()),
-        std::bind(&Session::handle_receive,shared_from_this(),placeholders::_1));  
+        _msgNodeRecv->msgClear();
+        _socket.async_receive(asio::buffer(_msgNodeRecv->getMsg(),_msgNodeRecv->getMaxLen()),
+        std::bind(&Session::handle_recv,shared_from_this(),placeholders::_1));  
         /*问题：error_code:system 125 - Operation Cancelled
             对于指针指针维护的类，在调用this时，应该继承std::enable_shared_from_this<>类
             通过函数shared_from_this()获得智能指针的this
@@ -62,15 +62,30 @@ void Session::start(){
 }
 
 /*
+ *@brief //双工异步发送接口
+*/
+void Session::send(const char* msg,int msgMaxLen){
+    std::lock_guard<mutex> lg(_mxSend);
+    _msgSendQueue.push(make_shared<MsgNode>(msg,msgMaxLen));
+    if(_msgSendQueue.size()==1){
+        _socket.async_send(asio::buffer(_msgSendQueue.front()->getMsg(),_msgSendQueue.front()->getMaxLen()),
+        std::bind(&Session::handle_send,shared_from_this(),placeholders::_1));
+    }else{
+        return;
+    }
+}
+
+/*
  *@brief 处理读事件
 */
-void Session::handle_receive(const boost::system::error_code& error){
+void Session::handle_recv(const boost::system::error_code& error){
     if(error) return;
     try{
-        cout<<"Msg:"<<_msgNodeReceive->getMsg()<<endl;
-        _msgNodeSend->msgCopy(_msgNodeReceive);
-        _socket.async_send(asio::buffer(_msgNodeSend->getMsg(),_msgNodeSend->getMaxLen()),
-        bind(&Session::handle_send,shared_from_this(),placeholders::_1));
+        cout<<"Msg:"<<_msgNodeRecv->getMsg()<<endl;
+        send(_msgNodeRecv->getMsg(),_msgNodeRecv->getMaxLen());
+        _msgNodeRecv->msgClear();
+        _socket.async_receive(asio::buffer(_msgNodeRecv->getMsg(),_msgNodeRecv->getMaxLen()),
+        std::bind(&Session::handle_recv,shared_from_this(),placeholders::_1));  
     }catch(const std::exception& e){
         std::cerr<<e.what()<<'\n';
     }
@@ -81,5 +96,14 @@ void Session::handle_receive(const boost::system::error_code& error){
 */
 void Session::handle_send(const boost::system::error_code& error){
     if(error) return;
-    start();  //循环执行读取事件
+    try{
+        std::lock_guard<mutex> lg(_mxSend);
+        _msgSendQueue.pop();
+        if(!_msgSendQueue.empty()){
+            _socket.async_send(asio::buffer(_msgSendQueue.front()->getMsg(),_msgSendQueue.front()->getMaxLen()),
+            std::bind(&Session::handle_send,shared_from_this(),placeholders::_1));
+        }
+    }catch(const std::exception& e){
+        std::cerr<<e.what()<<'\n';
+    }
 }
